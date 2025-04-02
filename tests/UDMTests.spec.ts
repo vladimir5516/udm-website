@@ -2,7 +2,7 @@ import { test, expect, Page } from '@playwright/test';
 
 // Configuration globale des tests
 test.describe('Tests Complets du Site Web', () => {
-  const BASE_URL = 'https://bzssjmpz.elementor.cloud/';
+  const BASE_URL = 'https://stg-km2hj4.elementor.cloud/';
 
   // Fonction utilitaire pour se connecter (si nécessaire)
   const loginIfRequired = async (page: Page) => {
@@ -27,7 +27,7 @@ test.describe('Tests Complets du Site Web', () => {
       expect(loadTime).toBeLessThan(3000);
 
       // Vérifier que les éléments principaux sont chargés
-      await expect(page.locator('body')).toBeVisible({ timeout: 5000 });
+      await expect(page.locator('body')).toBeVisible({ timeout: 4000 });
     });
 
     test('Vérification du temps de chargement des ressources', async ({ page }) => {
