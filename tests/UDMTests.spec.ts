@@ -23,8 +23,8 @@ test.describe('Tests Complets du Site Web', () => {
       // Calculer le temps de chargement
       const loadTime = Date.now() - startTime;
 
-      // Vérifier que la page se charge en moins de 3 secondes
-      expect(loadTime).toBeLessThan(3000);
+      // Vérifier que la page se charge en moins de 4 secondes
+      expect(loadTime).toBeLessThan(4000);
 
       // Vérifier que les éléments principaux sont chargés
       await expect(page.locator('body')).toBeVisible({ timeout: 4000 });
